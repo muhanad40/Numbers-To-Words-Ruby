@@ -24,4 +24,8 @@ describe NumbersToWords do
 
 	end
 
+	it 'converts "1513243" to "One Million Five Hundred and Thirteen Thousand Two Hundred and Fourty Three' do
+		expect(number_to_words.convert(1513243)).to eq "One Million Five Hundred and Thirteen Thousand Two Hundred and Fourty Three"
+	end
+
 end
