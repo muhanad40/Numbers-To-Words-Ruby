@@ -13,12 +13,11 @@
 				<label for="input">Enter any number under 999,999,999:</label><br/>
 				<input type="text" id="input" class="form-control" value="<%= input %>" name="numbers" />
 			</div>
-			<% if converted %>
-				<div class="clearfix"></div>
+			<br/>
+			<% if !converted.empty? %>
 				<h3><%= converted %></h3>
-				<br/>
 			<% end %>
-
+			<br/>
 			<input type="submit" class="btn btn-primary" value="Convert"/>
 			<br/><br/>
 		</form>
