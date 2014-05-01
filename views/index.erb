@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Numbers to Words converter</title>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+	<div class="container text-center">
+		<br/>
+		<h1><strong>Numbers to Words converter</strong></h1></h1>
+		<br/>
+		<form method="get" action="/" class="form-inline" role="form">
+			<div class="form-group">
+				<label for="input">Enter any number under 999,999,999:</label><br/>
+				<input type="text" id="input" class="form-control" value="<%= input %>" name="numbers" />
+			</div>
+			<% if converted %>
+				<div class="clearfix"></div>
+				<h3><%= converted %></h3>
+				<br/>
+			<% end %>
+
+			<input type="submit" class="btn btn-primary" value="Convert"/>
+			<br/><br/>
+		</form>
+	</div>
+	<div class="container text-center">
+		<!-- <p><a href="https://github.com/muhanad40/Numbers-To-Words">View Project on GitHub</a></p> -->
+		<iframe src="http://ghbtns.com/github-btn.html?user=muhanad40&repo=Numbers-To-Words&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+		<iframe src="http://ghbtns.com/github-btn.html?user=muhanad40&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="140" height="20"></iframe>
+	</div>
+
+</html>
