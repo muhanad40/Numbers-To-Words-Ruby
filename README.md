@@ -4,6 +4,10 @@ A personal Ruby challenge I wanted to take on.
 
 This was made into an independent class as an extension to the String and Integer(Fixnum) classes. This makes it more compatible.
 
+##Demo
+
+http://numberstowords.heroku.com
+
 ##Usage
 
 **NumbersToWords Class**
