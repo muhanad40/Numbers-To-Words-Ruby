@@ -4,7 +4,7 @@ require './lib/NumbersToWords.rb'
 
 get '/' do
 	puts params
-	if (params.include?("numbers") && params[:numbers].empty?) || params[:numbers].to_i > 999999999
+	if (params.include?("numbers") && params[:numbers].empty?)
 		redirect '/'
 	end
 	erb :index, :locals => {
