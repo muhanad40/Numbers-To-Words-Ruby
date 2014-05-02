@@ -18,7 +18,7 @@ You can add more words to the **WORDS** constant at the top of the **NumbersToWo
 
     require './Numbers-To-Words/lib/NumbersToWords.module.rb'
     require './Numbers-To-Words/lib/NumbersToWords.rb'
-    puts converter = NumberToWords.new.convert(123)
+    puts NumberToWords.new.convert(123)
 
 **String**
 
