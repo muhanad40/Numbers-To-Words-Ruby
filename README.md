@@ -10,7 +10,7 @@ http://numberstowords.heroku.com
 
 ##Usage
 
-**NumbersToWords Class**
+**NumbersToWords CLass**
 
     require './Numbers-To-Words/lib/NumbersToWords.module.rb'
     require './Numbers-To-Words/lib/NumbersToWords.rb'
@@ -20,7 +20,7 @@ http://numberstowords.heroku.com
 
     require './Numbers-To-Words/lib/NumbersToWords.module.rb'
     require './Numbers-To-Words/lib/String.rb'
-    puts "123".NumberToWords #=>
+    puts "123".NumberToWords
 
 **Integer**
 
