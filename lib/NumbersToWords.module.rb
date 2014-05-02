@@ -62,7 +62,3 @@ module NumbersToWords_Module
 	end
 
 end
-
-class Converter
-	include NumbersToWords_Module
-end
