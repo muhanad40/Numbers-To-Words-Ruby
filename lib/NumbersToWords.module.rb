@@ -13,7 +13,7 @@ module NumbersToWords_Module
 		number_parsed = parse(number)
 		number_parsed.reverse.each_with_index do |segment, index|
 			if index == 0
-				output << convert_segment(segment.join) + index>1 ? ',' : ''
+				output << convert_segment(segment.join)
 			else
 				output << convert_segment(segment.join) + ' ' + WORDS[index] + index>1 ? ',' : ''
 			end
