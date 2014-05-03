@@ -15,7 +15,7 @@ module NumbersToWords_Module
 			if index == 0
 				output << convert_segment(segment.join)
 			else
-				output << convert_segment(segment.join) + ' ' + WORDS[index] + index>1 ? ',' : ''
+				output << convert_segment(segment.join) + ' ' + WORDS[index] + ','
 			end
 		end
 		output.reverse.join(" ")
