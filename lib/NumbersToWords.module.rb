@@ -8,6 +8,21 @@ module NumbersToWords_Module
 	TENS = 'eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty'.split(" ").map(&:capitalize)
 	MULTIPLES_OF_TEN = 'ten twenty thirty fourty fifty sixty seventy eighty ninty hundred'.split(" ").map(&:capitalize)
 
+	def convert(number)
+		output = []
+		number_parsed = parse(number)
+		number_parsed.reverse.each_with_index do |segment, index|
+			if index == 0
+				output << convert_segment(segment.join) + ","
+			else
+				output << convert_segment(segment.join) + ' ' + WORDS[index] + ","
+			end
+		end
+		output.reverse.join(" ")
+	end
+
+	private
+	
 	def convert_number(number)
 		return false if number == 0
 		number = number.to_i
@@ -19,7 +34,7 @@ module NumbersToWords_Module
 			result = TENS[(number-1)-10]
 		elsif number >= 21 && number <= 99
 			result = MULTIPLES_OF_TEN[number_str[0].to_i-1]
-			result += ' ' + ONES[number_str[1].to_i-1]
+			result += '-' + ONES[number_str[1].to_i-1]
 		end
 		result.to_s
 	end
@@ -41,21 +56,6 @@ module NumbersToWords_Module
 		end
 		output
 	end
-
-	def convert(number)
-		output = []
-		number_parsed = parse(number)
-		number_parsed.reverse.each_with_index do |segment, index|
-			if index == 0
-				output << convert_segment(segment.join)
-			else
-				output << convert_segment(segment.join) + ' ' + WORDS[index]
-			end
-		end
-		output.reverse.join(" ")
-	end
-
-	private
 
 	def parse(number)
 		number.to_s.split('').reverse.each_slice(3).to_a.map(&:reverse).reverse
