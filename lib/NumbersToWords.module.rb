@@ -11,7 +11,6 @@ module NumbersToWords_Module
 	def convert(number)
 		output = []
 		number_parsed = parse(number)
-		puts number_parsed.count
 		return "<i>Error: number too large. Largest allowed is: " + WORDS.last.capitalize + "s</i>" if number_parsed.count > WORDS.count
 		number_parsed.reverse.each_with_index do |segment, index|
 			if index == 0
