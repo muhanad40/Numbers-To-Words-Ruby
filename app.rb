@@ -12,4 +12,5 @@ class NumbersToWordsApp < Sinatra::Base
 			input: params["numbers"]
 		}
 	end
+	run! if app_file == $0
 end
