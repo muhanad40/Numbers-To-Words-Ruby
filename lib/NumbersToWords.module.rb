@@ -60,5 +60,3 @@ module NumbersToWords_Module
 
 end
 
-puts NumbersToWords_Module::convert(801002)
-
