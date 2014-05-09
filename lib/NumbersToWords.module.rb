@@ -59,4 +59,3 @@ module NumbersToWords_Module
 	end
 
 end
-
