@@ -10,10 +10,15 @@ function NumbersToWords() {
 
 }
 
+NumbersToWords.prototype.context = '';
 NumbersToWords.prototype.WORDS = 'hundred thousand million billion trillion gazillion'.split(" ");
 NumbersToWords.prototype.ONES = 'zero one two three four five six seven eight nine ten'.split(" ");
 NumbersToWords.prototype.TENS = 'eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty'.split(" ");
 NumbersToWords.prototype.MULTIPLES_OF_TEN = 'ten twenty thirty fourty fifty sixty seventy eighty ninty hundred'.split(" ");
+
+NumbersToWords.prototype.set_context = function(context) {
+	this.context = context;
+};
 
 NumbersToWords.prototype.convert = function(number)
 {
@@ -47,6 +52,11 @@ NumbersToWords.prototype.convert = function(number)
 		}
 		output += output_arr.reverse().join(", ");
 	}
+	if(this.context !== '')
+	{
+		output += " " + this.context;
+	}
+	remove_extra = output.slice(-this.context.length);
 	return output;
 };
 
@@ -82,7 +92,7 @@ NumbersToWords.prototype.convert_segment = function(number)
 		output += this._capitalize(this.WORDS[0]);
 		if((number%100) > 0) {
 			output += " and ";
-			output += this.convert((number%100).toFixed());
+			output += this.convert_segment(number%100);
 		}
 	}
 	return output;
