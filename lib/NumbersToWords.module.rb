@@ -26,7 +26,7 @@ module NumbersToWords_Module
 				output << convert_segment(segment.join) + ' ' + WORDS[index] + ','
 			end
 		end
-		output.reverse.join(" ") + " " + @context.capitalize
+		output.reverse.join(" ") + " " + @context.to_s.capitalize
 	end
 
 	private
