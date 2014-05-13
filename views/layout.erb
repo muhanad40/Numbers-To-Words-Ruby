@@ -8,9 +8,10 @@
 		<br/>
 		<h1><strong>Numbers to Words converter</strong></h1>
 		<br/>
+		
 		<div class="btn-group">
-			<a href="/" class="btn btn-primary">Ruby</a>
-			<a href="/js" class="btn btn-default">JavaScript</a>
+			<a href="/" class="btn btn-<% if request.path_info == '/' %>primary<% else %>default<% end %>">Ruby</a>
+			<a href="/js" class="btn btn-<% if request.path_info == '/js' %>primary<% else %>default<% end %>">JavaScript</a>
 		</div>
 		<br/><br/>
 		<%= yield %>
