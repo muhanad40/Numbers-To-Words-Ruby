@@ -1,0 +1,16 @@
+<form method="get" action="/" class="form-inline" role="form">
+	<div class="form-group">
+		<label for="input-context">Context (pounds, dollars, rabbits, etc):</label><br/>
+		<input type="text" id="input-context" class="form-control" value="<%= input_context %>" name="context" />
+		<br/><br/>
+		<label for="input">Enter a number:</label><br/>
+		<input type="text" id="input" class="form-control" value="<%= input %>" name="numbers" />
+	</div>
+	<br/>
+	<% if !converted.empty? %>
+		<h3><%= converted %></h3>
+	<% end %>
+	<br/>
+	<input type="submit" class="btn btn-primary" value="Convert"/>
+	<br/><br/>
+</form>
