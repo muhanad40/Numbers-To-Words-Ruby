@@ -1,0 +1,29 @@
+<form method="get" action="/" class="form-inline" role="form">
+	<div class="form-group">
+		<label for="input-context">Context (plural):</label>
+		<br/>
+		<input type="text" id="input-context" class="form-control" value="" placeholder="Pounds, Rabbits, etc" name="context" />
+		<br/><br/>
+		<label for="input">Enter a number:</label><br/>
+		<input type="text" id="input" class="form-control" value="" placeholder="1234" name="numbers" />
+	</div>
+	<br/>
+	<div id="output"></div>
+	<br/>
+	<input type="button" id="convert-btn" class="btn btn-primary" value="Convert"/>
+	<br/><br/>
+</form>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/js/numbers_to_words.js"></script>
+<script>
+	$(document).ready(function() {
+		n2w = new NumbersToWords();
+		$("#convert-btn").on('click', function() {
+			n2w.set_context($("#input-context").val());
+			phrase = n2w.convert($("#input").val());
+			$("#output").fadeOut(function(){
+				$(this).html("<h3>" + phrase + "</h3>").fadeIn();
+			});
+		});
+	});
+</script>
