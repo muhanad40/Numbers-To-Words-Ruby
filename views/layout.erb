@@ -17,7 +17,11 @@
 		<%= yield %>
 	</div>
 	<div class="container text-center">
-		<iframe src="http://ghbtns.com/github-btn.html?user=muhanad40&repo=Numbers-To-Words&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+	<% if request.path_info == '/' %>
+			<iframe src="http://ghbtns.com/github-btn.html?user=muhanad40&repo=Numbers-To-Words-Ruby&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+		<% else %>
+			<iframe src="http://ghbtns.com/github-btn.html?user=muhanad40&repo=Numbers-To-Words-JS&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe>
+		<% end %>
 		<iframe src="http://ghbtns.com/github-btn.html?user=muhanad40&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="140" height="20"></iframe>
 	</div>
 </body>
