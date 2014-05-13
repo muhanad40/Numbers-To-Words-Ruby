@@ -1,5 +1,10 @@
 module NumbersToWords_Module
 
+	def initialize()
+		# Context of output (i.e pounds)
+		@context = ""
+	end
+
 	# ADD NAMES OF LARGE NUMBERS
 	WORDS = 'hundred thousand million billion trillion gazillion'.split(" ").map(&:capitalize)
 
@@ -7,6 +12,8 @@ module NumbersToWords_Module
 	ONES = 'zero one two three four five six seven eight nine ten'.split(" ").map(&:capitalize)
 	TENS = 'eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty'.split(" ").map(&:capitalize)
 	MULTIPLES_OF_TEN = 'ten twenty thirty fourty fifty sixty seventy eighty ninty hundred'.split(" ").map(&:capitalize)
+
+	attr_writer :context
 
 	def convert(number)
 		output = []
@@ -19,7 +26,7 @@ module NumbersToWords_Module
 				output << convert_segment(segment.join) + ' ' + WORDS[index] + ','
 			end
 		end
-		output.reverse.join(" ")
+		output.reverse.join(" ") + " " + @context.capitalize
 	end
 
 	private
