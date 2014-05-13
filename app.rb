@@ -11,7 +11,7 @@ class NumbersToWordsApp < Sinatra::Base
 		@n2w.context = params["context"]
 		erb :ruby,
 		:locals => {
-			converted: @n2w.convert(params[:numbers]),
+			converted: params[:numbers] ? @n2w.convert(params[:numbers]) : "",
 			input: params["numbers"],
 			input_context: params["context"]
 		}
