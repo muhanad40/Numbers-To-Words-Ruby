@@ -31,3 +31,10 @@ You can add more words to the **WORDS** constant at the top of the **NumbersToWo
     require './Numbers-To-Words/lib/NumbersToWords.module.rb'
     require './Numbers-To-Words/lib/Fixnum.rb'
     puts 123.NumberToWords
+
+##Technologies
+
+- RSpec
+- Sinatra
+- Heroku
+- Shotgun
