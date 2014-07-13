@@ -12,7 +12,7 @@ http://numberstowords.heroku.com
 
 ##Notes
 
-You can add more words to the **WORDS** property in the initializer method to extend the size of numbers the script can handle.
+You can add more words to the **WORDS** constant to extend the size of numbers the script can handle.
 
 I wrote this script in [JavaScript](https://github.com/muhanad40/Numbers-To-Words-JS) and [Python](https://github.com/muhanad40/Numbers-To-Words-Python)
 
