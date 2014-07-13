@@ -2,7 +2,7 @@
 
 ![](Numbers-To-Words-Screenshot.png?raw=true)
 
-A personal Ruby challenge I wanted to take on.
+A personal Ruby challenge I wanted to take on. This script takes a numerical input and outputs the words in English.
 
 This was made into an independent class as an extension to the String and Integer(Fixnum) classes. This makes it more compatible.
 
