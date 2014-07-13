@@ -10,9 +10,11 @@ This was made into an independent class as an extension to the String and Intege
 
 http://numberstowords.heroku.com
 
-##Note
+##Notes
 
 You can add more words to the **WORDS** constant at the top of the **NumbersToWords.module.rb** file.
+
+I wrote this script in [JavaScript](https://github.com/muhanad40/Numbers-To-Words-JS) and [Python](https://github.com/muhanad40/Numbers-To-Words-Python)
 
 ##Usage
 
